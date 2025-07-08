@@ -17,9 +17,6 @@ def predict(data: IrisInput):
     with open("rf_model.pkl", "rb") as f:
         model = pickle.load(f)
 
-    # Yeni: DataFrame olarak tahmin verisi oluştur
-    #features = pd.DataFrame([data.dict()])
-    #prediction = model.predict(features)
     features = np.array([[data.sepal_length, data.sepal_width, data.petal_length, data.petal_width]])
     prediction = model.predict(features)
 
