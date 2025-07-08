@@ -14,7 +14,7 @@ class Iris(SQLModel, table=True):
 DATABASE_URL = "postgresql://postgres:postgres@localhost:5432/iris_db"
 engine = create_engine(DATABASE_URL, echo=True)
 
-# Veritabanında tabloyu oluştur (zaten varsa atla)
+# Veritabanında tabloyu oluştur 
 def create_db_and_table():
     SQLModel.metadata.create_all(engine)
 
